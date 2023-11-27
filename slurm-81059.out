@@ -1,0 +1,135 @@
+/cm/local/apps/slurm/var/spool/job81059/slurm_script: line 6: fg: no job control
+it begins
+export CUBLAS_WORKSPACE_CONFIG=:4096:8
+Fri Nov  3 19:36:47 2023       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 530.30.02              Driver Version: 530.30.02    CUDA Version: 12.1     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                  Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf            Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Quadro RTX 6000                 On | 00000000:1D:00.0 Off |                  Off |
+| 33%   21C    P8               16W / 250W|      0MiB / 24576MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  Quadro RTX 6000                 On | 00000000:1E:00.0 Off |                  Off |
+| 33%   22C    P8               16W / 250W|      0MiB / 24576MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   2  Quadro RTX 6000                 On | 00000000:3D:00.0 Off |                  Off |
+| 33%   21C    P8               14W / 250W|      0MiB / 24576MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   3  Quadro RTX 6000                 On | 00000000:3F:00.0 Off |                  Off |
+| 33%   20C    P8                4W / 250W|      0MiB / 24576MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+/nfs/rs/sjkim/users/rjin1/Miniconda3/bin/conda
+----------------- Options ---------------
+         Datatypevariable: Data_3D_fmri                  
+                GECO_tune: False                         
+                      SCL: False                         
+                  SCL_map: False                         
+               batch_size: 32                            
+                     beta: 0.001                         
+                    beta1: 0.5                           
+          checkpoints_dir: ./COBRE_icares_1m3_ep44_5m3_ep44_1m2_44_1m3_42_1m3conti
+           continue_train: True                          
+                 corr_ica: False                         
+               corr_recon: False                         
+                crop_size: 192                           
+           data_aug_defor: False                         
+      data_aug_flipaffine: False                         
+          data_aug_thresh: False                         
+    data_aug_thresh_value: 0.0                           
+                 dataroot: ./datasets/COBRE_32           
+             dataset_mode: SyntheticFMRI                 
+              display_env: main                          
+             display_freq: 14080                         
+               display_id: 0                             
+            display_ncols: 9                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+                    epoch: latest                        
+              epoch_KLDAN: 1                             
+        epoch_KLDAN_start: -1                            
+          epoch_KLDmkskAN: 1                             
+    epoch_KLDmkskAN_start: -1                            
+           epoch_corr_end: 50000.0                       
+        epoch_corr_re_end: 50000.0                       
+      epoch_corr_re_start: 50000.0                       
+         epoch_corr_start: 50000.0                       
+              epoch_count: 1                             
+        epoch_recon_start: 0                             
+            epoch_scl_end: 50000.0                       
+          epoch_scl_start: 50000.0                       
+            epoch_sps_end: 50000.0                       
+          epoch_sps_start: 50000.0                       
+                      eta: 0                             
+                  eta_map: 0                             
+                  g_alpha: 0.99                          
+                    g_eta: 100                           
+                 g_target: 12000.0                       
+                    gamma: 0.5                           
+                 gan_mode: lsgan                         
+            gicacomp_path: ./gica/gicacomps_STBR.mat     
+                  gpu_ids: 0,1,2,3                       
+                init_gain: 0.001                         
+                init_type: normal                        
+                 input_nc: 1                             
+                  isTrain: True                          	[default: None]
+              lambda_corr: 0                             
+           lambda_corr_re: 0                             
+               lambda_sps: 0                             
+                load_iter: 0                             	[default: 0]
+                load_size: 64                            
+                       lr: 0.0001                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: monet                         
+                     name: experiment_name               
+                    niter: 50000                         
+              niter_decay: 0                             
+                  no_html: False                         
+                num_slots: 9                             
+                output_nc: 1                             
+                    phase: train                         
+                pool_size: 50                            
+               preprocess: none                          
+               print_freq: 320                           
+             save_by_iter: False                         
+          save_epoch_freq: 2                             
+         save_latest_freq: 69952                         
+           serial_batches: False                         
+               sparse_map: False                         
+                   suffix:                               
+                  tau_map: 0                             
+         update_html_freq: 14080                         
+                  verbose: False                         
+                    z_dim: 16                            
+                     zeta: 1                             
+----------------- End -------------------
+dataset [SyntheticFMRIDataset] was created
+The number of training images = 73606
+initialize network with normal
+initialize network with normal
+model [MONetModel] was created
+loading the model from ./COBRE_icares_1m3_ep44_5m3_ep44_1m2_44_1m3_42_1m3conti/experiment_name/latest_net_Attn.pth
+loading the model from ./COBRE_icares_1m3_ep44_5m3_ep44_1m2_44_1m3_42_1m3conti/experiment_name/latest_net_CVAE.pth
+---------- Networks initialized -------------
+[Network Attn] Total number of parameters : 36.467 M
+[Network CVAE] Total number of parameters : 0.632 M
+-----------------------------------------------
+create web directory ./COBRE_icares_1m3_ep44_5m3_ep44_1m2_44_1m3_42_1m3conti/experiment_name/web...
+(epoch: 1, iters: 320, time: 0.0783704, data: 0.594) E: 970.06372 D: 12710.47656 KL_mksk: 468.97144 zeta_temp: 1.00000 beta_temp: 0.00100 gamma_temp: 0.50000 
