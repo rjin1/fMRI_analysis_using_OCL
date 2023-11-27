@@ -1,6 +1,7 @@
 # fMRI analysis with OCL in PyTorch
 
 Dependency list
+
 torch
 cudakits
 scipy
