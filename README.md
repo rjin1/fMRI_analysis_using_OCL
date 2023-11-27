@@ -1,10 +1,6 @@
 # fMRI analysis with OCL in PyTorch
 
-Dependency list
-
-torch
-cudakits
-scipy
+Dependency: torch with cudakits, scipy
 
 The target is to decompose fMRI volumes while preserving spatial variations across volumes
 
